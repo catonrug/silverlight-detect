@@ -281,7 +281,7 @@ mv $tmp/$filename $tmp/$newfilename
 if [ -f "../gd/$appname.cfg" ]
 then
 echo Uploading $newfilename to Google Drive..
-echo Make sure you have created \"$appname\" direcotry inside it!
+echo Make sure you have created \"$appname\" directory inside it!
 ../uploader.py "../gd/$appname.cfg" "$tmp/$newfilename"
 echo
 fi
