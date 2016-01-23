@@ -6,7 +6,7 @@
 #sudo apt-get update -y && sudo apt-get upgrade -y
 #sudo apt-get install git -y
 #mkdir -p /home/pi/detect && cd /home/pi/detect
-#git clone https://github.com/catonrug/flash-player-detect.git && cd flash-player-detect && chmod +x check.sh && ./check.sh
+#git clone https://github.com/catonrug/silverlight-detect.git && cd silverlight-detect && chmod +x check.sh && ./check.sh
 
 #check if script is located in /home direcotry
 pwd | grep "^/home/" > /dev/null
