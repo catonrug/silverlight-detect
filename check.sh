@@ -290,7 +290,7 @@ fi
 							emails=$(cat ../posting | sed '$aend of file')
 							printf %s "$emails" | while IFS= read -r onemail
 							do {
-								python ../send-email.py "$onemail" "$filename $version" "$realurl
+								python ../send-email.py "$onemail" "$filename $version" "$url
 $md5
 $sha1"
 							} done
