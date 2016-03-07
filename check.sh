@@ -54,6 +54,12 @@ if [ ! -d "../gd" ]; then
   mkdir -p "../gd"
 fi
 
+if [ -f ~/uploader_credentials.txt ]; then
+sed "s/folder = test/folder = `echo $appname`/" ../uploader.cfg > ../gd/$appname.cfg
+else
+echo google upload will not be used cause ~/uploader_credentials.txt do not exist
+fi
+
 wget -t 1 -c -q -nv --user-agent="Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E)" http://www.microsoft.com/getsilverlight/handlers/getsilverlight.ashx -S -o $tmp/silverlight.log
 
 x86=$(sed "s/http/\nhttp/g" $tmp/silverlight.log | sed "s/\.exe/\.exe\n/g" | grep "^http.*\.exe")
